@@ -27,6 +27,7 @@ function Header() {
           <h1 className={s.bannerTitle}>React</h1>
           <p className={s.bannerDesc}>Complex web apps made easy</p>
         </div>
+        <div class="test"></div>
       </div>
     </div>
   );
