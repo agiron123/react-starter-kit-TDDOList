@@ -1,10 +1,11 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
+import TDDListItem from './TDDListItem';
 
 describe('App', () => {
 
-  it('renders component', () => {
+  it('renders TDDListItem', () => {
     const wrapper = shallow(
       <div>
         <TDDListItem>
@@ -14,7 +15,6 @@ describe('App', () => {
     );
 
     expect(wrapper.contains(<div class="tddListItem"></div>)).to.equal(true);
-
   });
 
 });
