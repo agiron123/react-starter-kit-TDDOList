@@ -18,6 +18,10 @@ class TDDListItem extends Component {
     super(props);
   }
 
+  static defaultProps = {
+      completionStatus: false
+  };
+
   render() {
     return (
       <div className="tddListItem">
