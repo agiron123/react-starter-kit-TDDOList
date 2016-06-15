@@ -52,4 +52,16 @@ describe('TDDListItem', () => {
     const labels = wrapper.find('label');
     expect(labels).to.have.length.of(1);
   });
+
+  it('sets label text through description prop', () => {
+    const wrapper = mount(
+      <div>
+        <TDDListItem description="My Todo." completionStatus={false} />
+      </div>
+    );
+
+    const labels = wrapper.find('label');
+    expect(labels.text()).to.equal("My Todo.");
+  });
+
 });

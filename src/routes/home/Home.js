@@ -18,7 +18,7 @@ function Home({ news }, context) {
   context.setTitle(title);
   return (
     <div className={s.root}>
-      <TDDListItem/>
+      <TDDListItem description={"Mow the lawn"} completionStatus={false}/>
       <div className={s.container}>
         <h1 className={s.title}>React.js News</h1>
         <ul className={s.news}>

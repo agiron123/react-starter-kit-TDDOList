@@ -21,7 +21,7 @@ class TDDListItem extends Component {
   render() {
     return (
       <div className="tddListItem">
-        <input type="checkbox" id="cbox" value="checkbox"/> <label id="label" for="cbox">Description goes here.</label>
+        <input type="checkbox" id="cbox" value="checkbox" defaultChecked={this.props.completionStatus}/> <label id="label" for="cbox">{this.props.description}</label>
       </div>
     );
   }
