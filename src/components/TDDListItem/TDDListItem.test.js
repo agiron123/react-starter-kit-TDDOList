@@ -64,4 +64,15 @@ describe('TDDListItem', () => {
     expect(labels.text()).to.equal("My Todo.");
   });
 
+  it('sets completion status to false by default', () => {
+    const wrapper = shallow(
+      <div>
+        <TDDListItem description="My Todo." />
+      </div>
+    );
+    
+    const componentProps = wrapper.props().children.props;
+    expect(componentProps.completionStatus).to.equal(false);
+  });
+
 });
