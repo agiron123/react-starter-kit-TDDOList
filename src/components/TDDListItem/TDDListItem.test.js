@@ -51,5 +51,4 @@ describe('TDDListItem', () => {
     expect(labels).to.have.length.of(1);
 
   });
-
 });
