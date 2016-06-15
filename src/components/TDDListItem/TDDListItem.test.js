@@ -1,7 +1,9 @@
 import React from 'react';
 import { expect } from 'chai';
-import { shallow, mount } from 'enzyme';
+import { shallow, mount, render } from 'enzyme';
 import TDDListItem from './TDDListItem';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+
 
 import jsdom from 'jsdom';
 const doc = jsdom.jsdom('<!doctype html><html><body></body></html>');
@@ -36,7 +38,7 @@ describe('TDDListItem', () => {
   });
 
   it('contains a label and a checkbox', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <div>
         <TDDListItem description="My Todo." completionStatus={false} />
       </div>
@@ -49,6 +51,5 @@ describe('TDDListItem', () => {
     //Check the rendered output for a label
     const labels = wrapper.find('label');
     expect(labels).to.have.length.of(1);
-
   });
 });

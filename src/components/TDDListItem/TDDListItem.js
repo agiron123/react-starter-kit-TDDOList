@@ -20,10 +20,13 @@ class TDDListItem extends Component {
 
   render() {
     return (
-      <div className={"tddListItem"}>
+      <div className="tddListItem">
+        <input type="checkbox" id="cbox" value="checkbox"/> <label id="label" for="cbox">Description goes here.</label>
       </div>
     );
   }
 }
 
-export default withStyles(s)(TDDListItem);
+//TODO: Figure out how to use isomorphic style loader with mocha tests.
+//export default withStyles(s)(TDDListItem);
+export default TDDListItem;

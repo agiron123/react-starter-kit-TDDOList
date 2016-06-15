@@ -10,6 +10,7 @@
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
+import TDDListItem from '../../components/TDDListItem';
 
 const title = 'React Starter Kit';
 
@@ -17,6 +18,7 @@ function Home({ news }, context) {
   context.setTitle(title);
   return (
     <div className={s.root}>
+      <TDDListItem/>
       <div className={s.container}>
         <h1 className={s.title}>React.js News</h1>
         <ul className={s.news}>
